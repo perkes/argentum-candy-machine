@@ -166,60 +166,86 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <main>
-      {wallet && (
-        <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
-      )}
+    <main> 
+      <table>
+        <tr>
+        <td className="container">
+        <h1>Heroes of Argentum</h1>
+        <p>Heroes of Argentum is a collection of NFTs - unique digital collectibles, 
+          on the Solana Blockchain. 10,000 heroes have been programmatically 
+          generated from a vast array of combinations, each with unique characteristics and 
+          different traits.</p>
+        <p>Own a hero and join the world of Argentum!</p>
+        {wallet && <h2>{itemsRedeemed}/{itemsAvailable} minted</h2>}
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
-
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
-
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
-
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
-
-      <MintContainer>
-        {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
-        ) : (
-          <MintButton
-            disabled={isSoldOut || isMinting || !isActive}
-            onClick={onMint}
-            variant="contained"
-          >
-            {isSoldOut ? (
-              "SOLD OUT"
-            ) : isActive ? (
-              isMinting ? (
-                <CircularProgress />
+        <MintContainer>
+          {!wallet ? (
+            <ConnectButton>Connect Wallet</ConnectButton>
+          ) : (
+            <MintButton
+              disabled={isSoldOut || isMinting || !isActive}
+              onClick={onMint}
+              variant="contained"
+            >
+              {isSoldOut ? (
+                "SOLD OUT"
+              ) : isActive ? (
+                isMinting ? (
+                  <CircularProgress />
+                ) : (
+                  "MINT"
+                )
               ) : (
-                "MINT"
-              )
-            ) : (
-              <Countdown
-                date={startDate}
-                onMount={({ completed }) => completed && setIsActive(true)}
-                onComplete={() => setIsActive(true)}
-                renderer={renderCounter}
-              />
-            )}
-          </MintButton>
-        )}
-      </MintContainer>
+                <Countdown
+                  date={startDate}
+                  onMount={({ completed }) => completed && setIsActive(true)}
+                  onComplete={() => setIsActive(true)}
+                  renderer={renderCounter}
+                />
+              )}
+            </MintButton>
+          )}
+        </MintContainer>
 
-      <Snackbar
-        open={alertState.open}
-        autoHideDuration={6000}
-        onClose={() => setAlertState({ ...alertState, open: false })}
-      >
-        <Alert
+        <Snackbar
+          open={alertState.open}
+          autoHideDuration={6000}
           onClose={() => setAlertState({ ...alertState, open: false })}
-          severity={alertState.severity}
         >
-          {alertState.message}
-        </Alert>
-      </Snackbar>
+          <Alert
+            onClose={() => setAlertState({ ...alertState, open: false })}
+            severity={alertState.severity}
+          >
+            {alertState.message}
+          </Alert>
+        </Snackbar>
+        <div>
+          <img className="logo" src="./twitter-logo.png" width="32" height="32"></img>
+          <img className="logo" src="./solscan-logo.png" width="32" height="32"></img>
+          <img className="logo" src="./github-logo.png" width="32" height="32"></img>
+        </div>
+      </td>
+      <td className="container">
+        <table>
+          <tr>
+            <td className="tile"><img src="./ao0.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao1.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao2.gif" width="160" height="160"></img></td>
+          </tr>
+          <tr>
+            <td className="tile"><img src="./ao3.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao4.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao5.gif" width="160" height="160"></img></td>
+          </tr>
+          <tr>
+            <td className="tile"><img src="./ao6.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao7.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao8.gif" width="160" height="160"></img></td>
+          </tr>
+        </table>
+      </td>
+      </tr>
+      </table>
     </main>
   );
 };
