@@ -6,8 +6,6 @@ import Alert from "@material-ui/lab/Alert";
 
 import * as anchor from "@project-serum/anchor";
 
-import { LAMPORTS_PER_SOL } from "@solana/web3.js";
-
 import { useAnchorWallet } from "@solana/wallet-adapter-react";
 import { WalletDialogButton } from "@solana/wallet-adapter-material-ui";
 
@@ -16,7 +14,6 @@ import {
   awaitTransactionSignatureConfirmation,
   getCandyMachineState,
   mintOneToken,
-  shortenAddress,
 } from "./candy-machine";
 
 const ConnectButton = styled(WalletDialogButton)``;
@@ -37,14 +34,12 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
-  const [balance, setBalance] = useState<number>();
   const [isActive, setIsActive] = useState(false); // true when countdown completes
   const [isSoldOut, setIsSoldOut] = useState(false); // true when items remaining is zero
   const [isMinting, setIsMinting] = useState(false); // true when user got to press MINT
 
   const [itemsAvailable, setItemsAvailable] = useState(0);
   const [itemsRedeemed, setItemsRedeemed] = useState(0);
-  const [itemsRemaining, setItemsRemaining] = useState(0);
 
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
@@ -74,7 +69,6 @@ const Home = (props: HomeProps) => {
       );
 
       setItemsAvailable(itemsAvailable);
-      setItemsRemaining(itemsRemaining);
       setItemsRedeemed(itemsRedeemed);
 
       setIsSoldOut(itemsRemaining === 0);
@@ -141,23 +135,10 @@ const Home = (props: HomeProps) => {
         severity: "error",
       });
     } finally {
-      if (wallet) {
-        const balance = await props.connection.getBalance(wallet.publicKey);
-        setBalance(balance / LAMPORTS_PER_SOL);
-      }
       setIsMinting(false);
       refreshCandyMachineState();
     }
   };
-
-  useEffect(() => {
-    (async () => {
-      if (wallet) {
-        const balance = await props.connection.getBalance(wallet.publicKey);
-        setBalance(balance / LAMPORTS_PER_SOL);
-      }
-    })();
-  }, [wallet, props.connection]);
 
   useEffect(refreshCandyMachineState, [
     wallet,
@@ -220,27 +201,27 @@ const Home = (props: HomeProps) => {
           </Alert>
         </Snackbar>
         <div>
-          <img className="logo" src="./twitter-logo.png" width="32" height="32"></img>
-          <img className="logo" src="./solscan-logo.png" width="32" height="32"></img>
-          <img className="logo" src="./github-logo.png" width="32" height="32"></img>
+          <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
+          <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
+          <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
         </div>
       </td>
       <td className="container">
         <table>
           <tr>
-            <td className="tile"><img src="./ao0.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao1.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao2.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao0.gif" width="160" height="160" alt="img0"></img></td>
+            <td className="tile"><img src="./ao1.gif" width="160" height="160" alt="img1"></img></td>
+            <td className="tile"><img src="./ao2.gif" width="160" height="160" alt="img2"></img></td>
           </tr>
           <tr>
-            <td className="tile"><img src="./ao3.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao4.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao5.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao3.gif" width="160" height="160" alt="img3"></img></td>
+            <td className="tile"><img src="./ao4.gif" width="160" height="160" alt="img4"></img></td>
+            <td className="tile"><img src="./ao5.gif" width="160" height="160" alt="img5"></img></td>
           </tr>
           <tr>
-            <td className="tile"><img src="./ao6.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao7.gif" width="160" height="160"></img></td>
-            <td className="tile"><img src="./ao8.gif" width="160" height="160"></img></td>
+            <td className="tile"><img src="./ao6.gif" width="160" height="160" alt="img6"></img></td>
+            <td className="tile"><img src="./ao7.gif" width="160" height="160" alt="img7"></img></td>
+            <td className="tile"><img src="./ao8.gif" width="160" height="160" alt="img8"></img></td>
           </tr>
         </table>
       </td>
