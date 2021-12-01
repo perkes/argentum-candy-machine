@@ -201,9 +201,15 @@ const Home = (props: HomeProps) => {
           </Alert>
         </Snackbar>
         <div>
-          <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
-          <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
-          <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
+          <a href="https://twitter.com/HeroesArgentum">
+            <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
+          </a>
+          <a href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
+            <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
+          </a>
+          <a href="https://github.com/martinabenedictis/heroesofargentum">
+            <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
+          </a>
         </div>
       </td>
       <td className="container">
