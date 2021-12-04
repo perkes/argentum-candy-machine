@@ -148,6 +148,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <main> 
+      <div className="content">
       <table>
         <tr>
         <td className="container">
@@ -200,16 +201,27 @@ const Home = (props: HomeProps) => {
             {alertState.message}
           </Alert>
         </Snackbar>
-        <div>
+        <div className="footer">
           <a href="https://twitter.com/HeroesArgentum">
             <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
           </a>
+          <div className="tooltip">
+            <span className="tooltiptext">Soon!</span>
+            <img className="logo" src="./discord-logo.png" width="32" height="32" alt="discord"></img>
+          </div>
           <a href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
             <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
           </a>
           <a href="https://github.com/martinabenedictis/heroesofargentum">
             <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
           </a>
+          <div className="ad">
+            <small>&nbsp;As seen on</small>
+            <br></br>
+            <a href="https://nftsolana.io/">
+              <img className="logo" src="./nft-sol-calendar-colored.png" width="140" height="54" alt="solana-nft-calendar"></img>
+            </a>
+          </div>
         </div>
       </td>
       <td className="container">
@@ -233,6 +245,7 @@ const Home = (props: HomeProps) => {
       </td>
       </tr>
       </table>
+      </div>
     </main>
   );
 };
