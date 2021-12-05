@@ -202,23 +202,28 @@ const Home = (props: HomeProps) => {
           </Alert>
         </Snackbar>
         <div className="footer">
-          <a href="https://twitter.com/HeroesArgentum">
-            <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
-          </a>
-          <div className="tooltip">
-            <span className="tooltiptext">Soon!</span>
-            <img className="logo" src="./discord-logo.png" width="32" height="32" alt="discord"></img>
+          <div className="buttons">
+            <a target="_blank" href="https://twitter.com/HeroesArgentum">
+              <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
+            </a>
+            <div className="tooltip">
+              <span className="tooltiptext">Soon!</span>
+              <img className="logo" src="./discord-logo.png" width="32" height="32" alt="discord"></img>
+            </div>
+            <a target="_blank" href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
+              <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
+            </a>
+            <a target="_blank" href="https://github.com/martinabenedictis/heroesofargentum">
+              <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
+            </a>
+            <a target="_blank" href="https://www.google.com/calendar/event?action=TEMPLATE&text=Heroes+of+Argentum+NFT&dates=20211213T140000/20211213T140000&details=Heroes+of+Argentum+is+a+collection+of+NFTs+%26%238211%3B+unique+digital+collectibles+on+Solana+%0A+++Discord+%3A+TBA%0A++Mint+%3A+0.10+SOL%0A+++Supply+%3A+10+000%0A+Twitter+%3A+%40HeroesArgentum%0A++Website+%3A+https%3A%2F%2Fwww.heroesofargentum.io%2F++%0A&location&trp=false&sprop=website:https://nftsolana.io&ctz=UTC">
+              <img className="logo" src="./calendar-logo.png" width="32" height="32" alt="calendar"></img>
+            </a>
           </div>
-          <a href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
-            <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
-          </a>
-          <a href="https://github.com/martinabenedictis/heroesofargentum">
-            <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
-          </a>
           <div className="ad">
             <small>&nbsp;As seen on</small>
             <br></br>
-            <a href="https://nftsolana.io/">
+            <a target="_blank" href="https://nftsolana.io/calendar-nft/heroes-of-argentum-nft/">
               <img className="logo" src="./nft-sol-calendar-colored.png" width="140" height="54" alt="solana-nft-calendar"></img>
             </a>
           </div>
