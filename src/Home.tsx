@@ -231,8 +231,8 @@ const Home = (props: HomeProps) => {
             <div className="ad">
               <small>&nbsp;As seen on</small>
               <br></br>
-              <a target="_blank" rel="noreferrer" href="https://nftcalendar.io/event/heroes-of-argentum/" alt="nft-calendar">
-                <img className="logo" src="./nft_calendar.png"></img>
+              <a target="_blank" rel="noreferrer" href="https://nftcalendar.io/event/heroes-of-argentum/">
+                <img className="logo" src="./nft_calendar.png" alt="nft-calendar"></img>
               </a>
             </div>
           </div>
