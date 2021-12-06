@@ -220,12 +220,21 @@ const Home = (props: HomeProps) => {
               <img className="logo" src="./calendar-logo.png" width="32" height="32" alt="calendar"></img>
             </a>
           </div>
-          <div className="ad">
-            <small>&nbsp;As seen on</small>
-            <br></br>
-            <a target="_blank" rel="noreferrer" href="https://nftsolana.io/calendar-nft/heroes-of-argentum-nft/">
-              <img className="logo" src="./nft-sol-calendar-colored.png" width="140" height="54" alt="solana-nft-calendar"></img>
-            </a>
+          <div>
+            <div className="ad">
+              <small>&nbsp;As seen on</small>
+              <br></br>
+              <a target="_blank" rel="noreferrer" href="https://nftsolana.io/calendar-nft/heroes-of-argentum-nft/">
+                <img className="logo" src="./nft-sol-calendar-colored.png" width="140" height="54" alt="solana-nft-calendar"></img>
+              </a>
+            </div>
+            <div className="ad">
+              <small>&nbsp;As seen on</small>
+              <br></br>
+              <a target="_blank" rel="noreferrer" href="https://nftcalendar.io/event/heroes-of-argentum/">
+                <img className="logo" src="./nft_calendar.png"></img>
+              </a>
+            </div>
           </div>
         </div>
       </td>
