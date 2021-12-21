@@ -216,8 +216,8 @@ const Home = (props: HomeProps) => {
             <a target="_blank" rel="noreferrer" href="https://github.com/martinabenedictis/heroesofargentum">
               <img className="logo" src="./github-logo.png" width="32" height="32" alt="github"></img>
             </a>
-            <a target="_blank" rel="noreferrer" href="https://www.google.com/calendar/event?action=TEMPLATE&text=Heroes+of+Argentum+NFT&dates=20211213T140000/20211213T140000&details=Heroes+of+Argentum+is+a+collection+of+NFTs+%26%238211%3B+unique+digital+collectibles+on+Solana+%0A+++Discord+%3A+TBA%0A++Mint+%3A+0.10+SOL%0A+++Supply+%3A+10+000%0A+Twitter+%3A+%40HeroesArgentum%0A++Website+%3A+https%3A%2F%2Fwww.heroesofargentum.io%2F++%0A&location&trp=false&sprop=website:https://nftsolana.io&ctz=UTC">
-              <img className="logo" src="./calendar-logo.png" width="32" height="32" alt="calendar"></img>
+            <a target="_blank" rel="noreferrer" href="https://t.co/biOV6MEfDJ">
+              <img className="logo" src="./solsea-logo.png" width="32" height="32" alt="solsea"></img>
             </a>
           </div>
           <div>
