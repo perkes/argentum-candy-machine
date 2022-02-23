@@ -152,7 +152,7 @@ const Home = (props: HomeProps) => {
       <table>
         <tr>
         <td className="container">
-        <h1>Heroes of Argentum</h1>
+        <img className="main-logo" src="./logo.png" width="600" height="226" alt="HoA"></img>
         <p>Heroes of Argentum is a collection of NFTs - unique digital collectibles, 
           on the Solana Blockchain. 10,000 heroes have been programmatically 
           generated from a vast array of combinations, each with unique characteristics and 
