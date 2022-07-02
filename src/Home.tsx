@@ -205,13 +205,10 @@ const Home = (props: HomeProps) => {
           <div className="buttons">
             <a target="_blank" rel="noreferrer" href="https://twitter.com/HeroesArgentum">
               <img className="logo" src="./twitter-logo.png" width="32" height="32" alt="twitter"></img>
-            </a>
-            <div className="tooltip">
-              <span className="tooltiptext">Soon!</span>
-              <a target="_blank" rel="noreferrer" href="https://discord.gg/w7xpsxYaB7">
+            </a> 
+            <a target="_blank" rel="noreferrer" href="https://discord.gg/w7xpsxYaB7">
               <img className="logo" src="./discord-logo.png" width="32" height="32" alt="discord"></img>
-              </a>
-            </div>
+            </a>
             <a target="_blank" rel="noreferrer" href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
               <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
             </a>
