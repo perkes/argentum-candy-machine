@@ -208,7 +208,9 @@ const Home = (props: HomeProps) => {
             </a>
             <div className="tooltip">
               <span className="tooltiptext">Soon!</span>
+              <a target="_blank" rel="noreferrer" href="https://discord.gg/w7xpsxYaB7">
               <img className="logo" src="./discord-logo.png" width="32" height="32" alt="discord"></img>
+              </a>
             </div>
             <a target="_blank" rel="noreferrer" href="https://solscan.io/account/Cb9TfAyWW4DpThYfwnuJ4mhsGTEK6iLaZypLD3eA6vQp">
               <img className="logo" src="./solscan-logo.png" width="32" height="32" alt="solscan"></img>
